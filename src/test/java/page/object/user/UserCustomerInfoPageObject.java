@@ -2,14 +2,14 @@ package page.object.user;
 
 import org.openqa.selenium.WebDriver;
 
-import commons.BasePage;
-import commons.PagesGeneratorManager;
+import commons.PatternObjectsActions;
 import page.ui.user.UserCustomerInfoPageUI;
 
-public class UserCustomerInfoPageObject extends BasePage {
+public class UserCustomerInfoPageObject extends PatternObjectsActions {
 	private WebDriver driver;
 
 	public UserCustomerInfoPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
@@ -31,12 +31,6 @@ public class UserCustomerInfoPageObject extends BasePage {
 	public String getEmailTextboxValue() {
 		waitForElementVisible(driver, UserCustomerInfoPageUI.EMAIL_TEXTBOX);
 		return getElementAttribute(driver, UserCustomerInfoPageUI.EMAIL_TEXTBOX, "value");
-	}
-
-	public UserHomePageObject clickLogoutHeaderLink() {
-		waitForElementClickable(driver, UserCustomerInfoPageUI.LOGOUT_HEADER_LINK);
-		clickElement(driver, UserCustomerInfoPageUI.LOGOUT_HEADER_LINK);
-		return PagesGeneratorManager.getUserHomePage(driver);
 	}
 
 }

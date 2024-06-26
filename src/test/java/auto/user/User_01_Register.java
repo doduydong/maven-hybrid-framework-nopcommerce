@@ -39,7 +39,7 @@ public class User_01_Register extends BaseTest {
 
 	@Test
 	public void Register_01_Empty_Data() {
-		userRegisterPage = userHomePage.clickRegisterHeaderLink();
+		userRegisterPage = (UserRegisterPageObject) userHomePage.clickHeaderLinkByLinkText("Register");
 
 		userRegisterPage.sendKeysToFirstNameTextbox("");
 
@@ -64,7 +64,7 @@ public class User_01_Register extends BaseTest {
 
 	@Test
 	public void Register_02_Invalid_Email() {
-		userRegisterPage.clickRegisterHeaderLink();
+		userRegisterPage.clickHeaderLinkByLinkText("Register");
 
 		userRegisterPage.sendKeysToFirstNameTextbox(firstName);
 
@@ -83,7 +83,7 @@ public class User_01_Register extends BaseTest {
 
 	@Test
 	public void Register_03_Invalid_Password() {
-		userRegisterPage.clickRegisterHeaderLink();
+		userRegisterPage.clickHeaderLinkByLinkText("Register");
 
 		userRegisterPage.sendKeysToFirstNameTextbox(firstName);
 
@@ -102,7 +102,7 @@ public class User_01_Register extends BaseTest {
 
 	@Test
 	public void Register_04_Wrong_Confirm_Password() {
-		userRegisterPage.clickRegisterHeaderLink();
+		userRegisterPage.clickHeaderLinkByLinkText("Register");
 
 		userRegisterPage.sendKeysToFirstNameTextbox(firstName);
 
@@ -121,7 +121,7 @@ public class User_01_Register extends BaseTest {
 
 	@Test
 	public void Register_05_Valid_Data() {
-		userRegisterPage.clickRegisterHeaderLink();
+		userRegisterPage.clickHeaderLinkByLinkText("Register");
 
 		userRegisterPage.sendKeysToFirstNameTextbox(firstName);
 
@@ -139,7 +139,7 @@ public class User_01_Register extends BaseTest {
 
 		userHomePage = userRegisterPage.clickContinueButton();
 
-		userCustomerInfoPage = userHomePage.clickMyAccountHeaderLink();
+		userCustomerInfoPage = (UserCustomerInfoPageObject) userHomePage.clickHeaderLinkByLinkText("My account");
 
 		Assert.assertEquals(userCustomerInfoPage.getCustomerPageTitle(), "My account - Customer info");
 
@@ -149,12 +149,12 @@ public class User_01_Register extends BaseTest {
 
 		Assert.assertEquals(userCustomerInfoPage.getEmailTextboxValue(), emailAddress);
 
-		userHomePage = userCustomerInfoPage.clickLogoutHeaderLink();
+		userHomePage = (UserHomePageObject) userCustomerInfoPage.clickHeaderLinkByLinkText("Log out");
 	}
 
 	@Test
 	public void Register_06_Existing_Email() {
-		userRegisterPage = userHomePage.clickRegisterHeaderLink();
+		userRegisterPage = (UserRegisterPageObject) userHomePage.clickHeaderLinkByLinkText("Register");
 
 		userRegisterPage.sendKeysToFirstNameTextbox(firstName);
 

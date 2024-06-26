@@ -2,27 +2,14 @@ package page.object.user;
 
 import org.openqa.selenium.WebDriver;
 
-import commons.BasePage;
-import commons.PagesGeneratorManager;
-import page.ui.user.UserHomePageUI;
+import commons.PatternObjectsActions;
 
-public class UserHomePageObject extends BasePage {
+public class UserHomePageObject extends PatternObjectsActions {
 	private WebDriver driver;
 
 	public UserHomePageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
-	}
-
-	public UserRegisterPageObject clickRegisterHeaderLink() {
-		waitForElementClickable(driver, UserHomePageUI.REGISTER_HEADER_LINK);
-		clickElement(driver, UserHomePageUI.REGISTER_HEADER_LINK);
-		return PagesGeneratorManager.getUserRegisterPage(driver);
-	}
-
-	public UserCustomerInfoPageObject clickMyAccountHeaderLink() {
-		waitForElementClickable(driver, UserHomePageUI.MY_ACCOUNT_HEADER_LINK);
-		clickElement(driver, UserHomePageUI.MY_ACCOUNT_HEADER_LINK);
-		return PagesGeneratorManager.getUserCustomerInfoPage(driver);
 	}
 
 }

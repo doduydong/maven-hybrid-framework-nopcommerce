@@ -2,14 +2,15 @@ package page.object.user;
 
 import org.openqa.selenium.WebDriver;
 
-import commons.BasePage;
 import commons.PagesGeneratorManager;
+import commons.PatternObjectsActions;
 import page.ui.user.UserRegisterPageUI;
 
-public class UserRegisterPageObject extends BasePage {
+public class UserRegisterPageObject extends PatternObjectsActions {
 	private WebDriver driver;
 
 	public UserRegisterPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
@@ -82,11 +83,6 @@ public class UserRegisterPageObject extends BasePage {
 	public String getExistingEmailErrorMessage() {
 		waitForElementVisible(driver, UserRegisterPageUI.EXISTING_EMAIL_ERROR_MESSAGE);
 		return getElementText(driver, UserRegisterPageUI.EXISTING_EMAIL_ERROR_MESSAGE);
-	}
-
-	public void clickRegisterHeaderLink() {
-		waitForElementClickable(driver, UserRegisterPageUI.REGISTER_HEADER_LINK);
-		clickElement(driver, UserRegisterPageUI.REGISTER_HEADER_LINK);
 	}
 
 }

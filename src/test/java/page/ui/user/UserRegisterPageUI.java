@@ -20,6 +20,4 @@ public class UserRegisterPageUI {
 	public static final String REGISTER_SUCCESS_MESSAGE = "//div[@class='result']";
 	public static final String EXISTING_EMAIL_ERROR_MESSAGE = "//div[contains(@class,'validation-summary-errors')]";
 
-	public static final String REGISTER_HEADER_LINK = "//a[@class='ico-register']";
-
 }
