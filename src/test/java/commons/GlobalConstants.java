@@ -18,6 +18,7 @@ public class GlobalConstants {
 	public static final String ADMIN_STAG_URL = "https://admin-staging.nopcommerce.com/";
 	public static final String ADMIN_PROD_URL = "https://admin-prod.nopcommerce.com/";
 
+	public static final String OS_NAME = System.getProperty("os.name");
 	public static final String USER_NAME = System.getProperty("user.name");
 
 	// Paths
