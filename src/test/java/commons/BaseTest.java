@@ -15,6 +15,10 @@ public class BaseTest {
 	protected Logger log = LogManager.getLogger(this.getClass());
 	private String browserName;
 
+	public WebDriver getDriver() {
+		return driver;
+	}
+
 	protected WebDriver initDriver(String browserName, String siteName, String serverName) {
 		this.browserName = browserName;
 		switch (browserName.toLowerCase()) {

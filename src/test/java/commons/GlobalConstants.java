@@ -18,10 +18,13 @@ public class GlobalConstants {
 	public static final String ADMIN_STAG_URL = "https://admin-staging.nopcommerce.com/";
 	public static final String ADMIN_PROD_URL = "https://admin-prod.nopcommerce.com/";
 
+	public static final String USER_NAME = System.getProperty("user.name");
+
 	// Paths
 	public static final String PROJECT_PATH = System.getProperty("user.dir");
 	public static final String FILE_SEP = File.separator;
 	public static final String UPLOAD_FILES_PATH = PROJECT_PATH + FILE_SEP + "uploadFiles" + FILE_SEP;
+	public static final String EXTENT_REPORTS_PATH = PROJECT_PATH + FILE_SEP + "reports" + FILE_SEP;
 
 	// Timeout
 	public static final int LONG_TIMEOUT = 10;
