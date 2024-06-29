@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite">
-	
+
 	<listeners>
-		<listener class-name="utilities.ExtentReportsListener"/>
+		<listener class-name="utilities.ExtentReportsListener" />
 	</listeners>
 
 	<parameter name="site" value="user" />
@@ -12,6 +12,7 @@
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="auto.user.User_01_Register" />
+			<class name="auto.user.User_02_Login" />
 		</classes>
 	</test>
 
@@ -19,6 +20,7 @@
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="auto.user.User_01_Register" />
+			<class name="auto.user.User_02_Login" />
 		</classes>
 	</test>
 
@@ -26,6 +28,7 @@
 		<parameter name="browser" value="firefox" />
 		<classes>
 			<class name="auto.user.User_01_Register" />
+			<class name="auto.user.User_02_Login" />
 		</classes>
 	</test>
 

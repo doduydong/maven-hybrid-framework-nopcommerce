@@ -85,4 +85,14 @@ public class UserRegisterPageObject extends PatternObjectsActions {
 		return getElementText(driver, UserRegisterPageUI.EXISTING_EMAIL_ERROR_MESSAGE);
 	}
 
+	public UserHomePageObject registerNewUserAccount(String firstName, String lastName, String emailAddress, String password) {
+		sendKeysToFirstNameTextbox(firstName);
+		sendKeysToLastNameTextbox(lastName);
+		sendKeysToEmailTextbox(emailAddress);
+		sendKeysToPasswordTextbox(password);
+		sendKeysToConfirmPasswordTextbox(password);
+		clickRegisterButton();
+		return clickContinueButton();
+	}
+
 }

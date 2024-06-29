@@ -19,6 +19,8 @@ public class PatternObjectsActions extends BasePage {
 			return PagesGeneratorManager.getUserCustomerInfoPage(driver);
 		case "Log out":
 			return PagesGeneratorManager.getUserHomePage(driver);
+		case "Log in":
+			return PagesGeneratorManager.getUserLoginPage(driver);
 		default:
 			throw new RuntimeException("'" + linkText.toUpperCase() + "' link is invalid");
 		}

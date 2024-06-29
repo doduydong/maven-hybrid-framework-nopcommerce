@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import page.object.user.UserCustomerInfoPageObject;
 import page.object.user.UserHomePageObject;
+import page.object.user.UserLoginPageObject;
 import page.object.user.UserRegisterPageObject;
 
 public class PagesGeneratorManager {
@@ -18,6 +19,10 @@ public class PagesGeneratorManager {
 
 	public static UserCustomerInfoPageObject getUserCustomerInfoPage(WebDriver driver) {
 		return new UserCustomerInfoPageObject(driver);
+	}
+
+	public static PatternObjectsActions getUserLoginPage(WebDriver driver) {
+		return new UserLoginPageObject(driver);
 	}
 
 }
