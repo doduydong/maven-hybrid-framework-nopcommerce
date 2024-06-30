@@ -40,4 +40,10 @@ public class UserLoginPageObject extends PatternObjectsActions {
 		return getElementText(driver, UserLoginPageUI.LOGIN_ERROR_MESSAGE);
 	}
 
+	public UserHomePageObject loginToSystem(String emailAddress, String password) {
+		sendKeysToEmailTextbox(emailAddress);
+		sendKeysToPasswordTextbox(password);
+		return clickLoginButton();
+	}
+
 }

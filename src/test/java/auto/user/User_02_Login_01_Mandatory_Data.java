@@ -13,13 +13,13 @@ import com.aventstack.extentreports.Status;
 
 import commons.BaseTest;
 import commons.PagesGeneratorManager;
-import page.object.user.UserCustomerInfoPageObject;
 import page.object.user.UserHomePageObject;
 import page.object.user.UserLoginPageObject;
 import page.object.user.UserRegisterPageObject;
+import page.object.user.myaccount.UserCustomerInfoPageObject;
 import utilities.ExtentReportsListener;
 
-public class User_02_Login extends BaseTest {
+public class User_02_Login_01_Mandatory_Data extends BaseTest {
 	private WebDriver driver;
 	private UserHomePageObject userHomePage;
 	private UserRegisterPageObject userRegisterPage;

@@ -26,4 +26,13 @@ public class PatternObjectsActions extends BasePage {
 		}
 	}
 
+	public String getBarNotificationSuccessMessage() {
+		waitForElementVisible(driver, PatternObjectsUIs.BAR_NOTIFICATION_SUCCESS);
+		String message = getElementText(driver, PatternObjectsUIs.BAR_NOTIFICATION_SUCCESS);
+		waitForElementClickable(driver, PatternObjectsUIs.BAR_NOTIFICATION_SUCCESS_CLOSE_ICON);
+		clickElement(driver, PatternObjectsUIs.BAR_NOTIFICATION_SUCCESS_CLOSE_ICON);
+		waitForElementInvisible(driver, PatternObjectsUIs.BAR_NOTIFICATION_SUCCESS);
+		return message;
+	}
+
 }
